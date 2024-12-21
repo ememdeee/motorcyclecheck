@@ -16,7 +16,7 @@ export function CTASection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Ready to Uncover Your Motorcycle's Hidden History?
+          Ready to Uncover Your Motorcycle&apos;s Hidden History?
         </motion.h2>
         <motion.p 
           className="text-xl mb-8 text-gray-300 relative z-10"
@@ -25,7 +25,7 @@ export function CTASection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Don't leave your motorcycle purchase to chance. Get the facts you need to make an informed decision.
+          Don&apos;t leave your motorcycle purchase to chance. Get the facts you need to make an informed decision.
         </motion.p>
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}

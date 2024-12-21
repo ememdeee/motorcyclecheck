@@ -21,7 +21,7 @@ export function TrustIndicators() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-xl font-semibold text-gray-700">
+          <p className="text-3xl font-semibold text-gray-700">
             Trusted and featured by industry leaders
           </p>
         </motion.div>
@@ -37,8 +37,8 @@ export function TrustIndicators() {
               <Image
                 src={logo.src}
                 alt={`${logo.name} logo`}
-                width={120}
-                height={40}
+                width={180}
+                height={60}
                 className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
               />
             </motion.div>

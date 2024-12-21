@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-// import { Montserrat, Exo_2 } from 'next/font/google'
-// import { SupportButton } from '@/components/support-button'
+import { Montserrat, Exo_2 } from 'next/font/google'
 import './globals.css'
 import { Navigation } from './components/navigation'
-import { Footer } from './components/footer'
 import { SupportButton } from './components/support-button'
+import { Footer } from './components/footer'
 
-// const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
-// const exo2 = Exo_2({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
+const exo2 = Exo_2({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'MotoInsights - Motorcycle History Reports & Specs',
@@ -20,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`scroll-smooth dark`}>
-      <body className={`bg-background text-foreground bg-cyber min-h-screen`}>
+    <html lang="en" className={`scroll-smooth dark ${montserrat.variable}`}>
+      <body className={`${exo2.className} bg-background text-foreground bg-cyber min-h-screen`}>
         <Navigation />
         <main>{children}</main>
         <SupportButton />

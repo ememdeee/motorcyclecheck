@@ -11,7 +11,7 @@ export function TrustBadgesSection() {
             Your Trust, Our Promise
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're committed to providing you with a seamless, secure experience backed by our unwavering guarantee of quality and protection.
+            We&apos;re committed to providing you with a seamless, secure experience backed by our unwavering guarantee of quality and protection.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -24,7 +24,7 @@ export function TrustBadgesSection() {
                 <Badge variant="secondary" className="mb-2">100% Satisfaction Guaranteed</Badge>
                 <h3 className="text-xl font-semibold mb-2">Unmatched Quality Assurance</h3>
                 <p className="text-gray-600">
-                  If you're not completely satisfied with our service, we'll make it right or refund your purchase. Your peace of mind is our top priority.
+                  If you&apos;re not completely satisfied with our service, we&apos;ll make it right or refund your purchase. Your peace of mind is our top priority.
                 </p>
               </div>
             </CardContent>

@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -45,8 +43,8 @@ export function ExpertSupportSection() {
             Backed by a Team of Vehicle History Wizards
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our dedicated experts are committed to unraveling the mysteries of any vehicle's past. 
-            With round-the-clock support, we ensure you're never left in the dark.
+            Our dedicated experts are committed to unraveling the mysteries of any vehicle&apos;s past. 
+            With round-the-clock support, we ensure you&apos;re never left in the dark.
           </p>
         </div>
 

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { TrendingUp, Shield, Users, DollarSign, Clock, Zap } from 'lucide-react'
+import { TrendingUp, Shield, Clock, Zap } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 
 export function BoostSaleSection() {

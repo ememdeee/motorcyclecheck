@@ -47,7 +47,7 @@ export function CustomerSupportSection() {
           </h2>
           <p className="text-lg text-gray-600">
             Experience exceptional support from our dedicated team of vehicle history experts. 
-            We're here around the clock to ensure you get the assistance you need, when you need it.
+            We&apos;re here around the clock to ensure you get the assistance you need, when you need it.
           </p>
         </div>
 

@@ -29,23 +29,20 @@ export function SatisfactionGuaranteedSection() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-start justify-between">
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-8">
-            <Badge variant="outline" className="mb-4 text-blue-600 border-blue-600">
+            <Badge variant="outline" className="mb-4 text-gray-700 border-blue-600">
               Our Ironclad Guarantees
             </Badge>
-            <h2 className="text-4xl font-bold mb-6 text-blue-900">
-              Satisfaction So Guaranteed, It's Almost Unfair
+            <h2 className="text-4xl font-bold mb-6 text-gray-800">
+              Satisfaction So Guaranteed, It&apos;s Almost Unfair
             </h2>
-            <p className="text-lg text-blue-700 mb-8">
-              We're not just confident in our service - we're downright cocky. 
-              That's why we offer guarantees that'll make other companies green with envy.
+            <p className="text-lg text-gray-700 mb-8">
+              We&apos;re not just confident in our service - we&apos;re downright cocky. 
+              That&apos;s why we offer guarantees that&apos;ll make other companies green with envy.
             </p>
             <div className="bg-white p-6 rounded-lg shadow-md mt-8 border border-blue-100">
-              <h3 className="text-xl font-semibold mb-2 text-blue-800">What Our Customers Say</h3>
-              <p className="text-blue-600 italic mb-4">
-                "I was skeptical at first, but their guarantees are the real deal. 
-                When I had an issue, they resolved it faster than I could say 'VIN number'!"
-              </p>
-              <p className="text-blue-700 font-semibold">- Sarah T., Happy Customer</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">What Our Customers Say</h3>
+              <p className="text-gray-600 italic mb-4">&apos;I was skeptical at first, but their guarantees are the real deal. When I had an issue, they resolved it faster than I could say &apos;VIN number&apos;!</p>
+              <p className="text-gray-700 font-semibold">- Sarah T., Happy Customer</p>
             </div>
           </div>
           <div className="lg:w-1/2">
@@ -60,11 +57,11 @@ export function SatisfactionGuaranteedSection() {
                 <Card className="mb-6 bg-white hover:shadow-lg transition-all duration-300 border border-blue-100">
                   <CardContent className="p-6 flex items-start space-x-4">
                     <div className="bg-blue-100 p-3 rounded-full">
-                      <guarantee.icon className="h-8 w-8 text-blue-600" />
+                      <guarantee.icon className="h-8 w-8 text-gray-600" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-blue-800">{guarantee.title}</h3>
-                      <p className="text-blue-600">{guarantee.description}</p>
+                      <h3 className="text-xl font-semibold mb-2 text-gray-800">{guarantee.title}</h3>
+                      <p className="text-gray-600">{guarantee.description}</p>
                     </div>
                   </CardContent>
                 </Card>

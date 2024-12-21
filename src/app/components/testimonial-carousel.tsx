@@ -1,9 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Card, CardContent } from '@/components/ui/card'
-import { ChevronLeft, ChevronRight, Wrench, Compass, Shield } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Wrench, Compass, Shield } from 'lucide-react'
 
 const testimonials = [
   {
@@ -29,6 +28,8 @@ export function TestimonialCarousel() {
     }, 5000)
     return () => clearInterval(timer)
   }, [])
+
+  console.log(currentIndex)
 
   return (
     <section className="py-20 bg-gradient-to-br from-background to-background/50 text-foreground">

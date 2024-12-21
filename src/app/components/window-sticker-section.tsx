@@ -93,7 +93,7 @@ export function WindowStickerSection() {
           transition={{ duration: 0.8, delay: 1.4 }}
           viewport={{ once: true }}
         >
-          Whether you're selling your bike or showing it off, our window stickers will help it shine.
+          Whether you&apos;re selling your bike or showing it off, our window stickers will help it shine.
         </motion.p>
         <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
           <motion.div 
@@ -104,7 +104,7 @@ export function WindowStickerSection() {
             viewport={{ once: true }}
           >
             <p className="text-xl text-gray-300">
-              Think of a window sticker as your car's all-access pass to its coolest features. It's not just a label, it's a treasure map to everything that makes your ride unique. From horsepower to cup holders, we've got it all covered!
+              Think of a window sticker as your car&apos;s all-access pass to its coolest features. It&apos;s not just a label, it&apos;s a treasure map to everything that makes your ride unique. From horsepower to cup holders, we&apos;ve got it all covered!
             </p>
             <div className="relative h-[400px] bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg overflow-hidden shadow-md">
               <Image

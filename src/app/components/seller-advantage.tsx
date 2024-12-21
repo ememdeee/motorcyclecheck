@@ -8,7 +8,7 @@ export function SellerAdvantage() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold">
-              The Smart Seller's Advantage
+              The Smart Seller&apos;s Advantage
             </h2>
             <div className="space-y-4">
               <div className="border-l-4 border-blue-600 pl-4">
@@ -26,7 +26,7 @@ export function SellerAdvantage() {
               <div className="border-l-4 border-blue-600 pl-4">
                 <h3 className="font-bold text-xl mb-2">Original Details</h3>
                 <p className="text-gray-600">
-                  Window stickers showcase your vehicle's original features and value.
+                  Window stickers showcase your vehicle&apos;s original features and value.
                 </p>
               </div>
             </div>

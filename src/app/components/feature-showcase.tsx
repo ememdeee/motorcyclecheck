@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { History, AlertTriangle, PenToolIcon as Tool, FileCheck, Info } from 'lucide-react'
+import { History, AlertTriangle, PenToolIcon as Tool, FileCheck } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
@@ -86,7 +86,7 @@ export function FeatureShowcase() {
           viewport={{ once: true }}
         >
           <p className="text-xl text-gray-300 mb-6">
-            Don't just take a chance — ride with confidence knowing the bike's full history.
+            Don&apos;t just take a chance — ride with confidence knowing the bike&apos;s full history.
           </p>
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 neon-border">
             Get Your Report Now

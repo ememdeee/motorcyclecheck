@@ -24,7 +24,7 @@ export function Features() {
             <Car className="h-12 w-12 text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Original Window Sticker</h3>
             <p className="text-gray-600">
-              Show potential buyers your vehicle's original features, options, and MSRP.
+              Show potential buyers your vehicle&apos;s original features, options, and MSRP.
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">

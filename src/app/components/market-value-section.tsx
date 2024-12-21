@@ -1,10 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { DollarSign, TrendingUp, BarChart3, Car, BikeIcon as Motorcycle } from 'lucide-react'
+import { DollarSign, TrendingUp, BarChart3, BikeIcon as Motorcycle } from 'lucide-react'
 
 export function MarketValueSection() {
   return (
@@ -22,7 +20,7 @@ export function MarketValueSection() {
               Why Choose MotoInsights?
             </h2>
             <p className="text-xl text-gray-300">
-              We're not just about motorcycles; we're about the riders, the thrill of the ride, and making every decision the right one. When you choose us, you get:
+              We&apos;re not just about motorcycles; we&apos;re about the riders, the thrill of the ride, and making every decision the right one. When you choose us, you get:
             </p>
             
           </motion.div>
