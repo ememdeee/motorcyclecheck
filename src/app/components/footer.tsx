@@ -78,7 +78,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="text-sm text-gray-300">
-            © {new Date().getFullYear()} MotoInsights. All rights reserved.
+            © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}. All rights reserved.
           </p>
         </div>
       </div>

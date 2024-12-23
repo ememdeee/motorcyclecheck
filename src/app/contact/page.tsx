@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
-import { Clock, Mail, Phone, MapPin } from 'lucide-react'
+import { Clock, Mail, Phone } from 'lucide-react'
 
 export default function Contact() {
   return (
@@ -121,9 +121,8 @@ export default function Contact() {
           >
             {[
               { icon: Clock, title: 'Support hours', content: '24/7 Live Chat Support' },
-              { icon: Mail, title: 'Email us', content: 'Send a Mail' },
-              { icon: Phone, title: 'Phone', content: '866-384-0577' },
-              { icon: MapPin, title: 'Address', content: '2196 3rd Ave #4001\nNew York, NY\nUnited States' },
+              { icon: Mail, title: 'Email us', content: process.env.NEXT_PUBLIC_WEBSITE_EMAIL },
+              { icon: Phone, title: 'Phone', content: process.env.NEXT_PUBLIC_WEBSITE_PHONE },
             ].map((item, index) => (
               <div key={index} className="group bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 flex items-start space-x-4 hover:shadow-md transition-all duration-300 border border-gray-700">
                 <item.icon className="w-6 h-6 text-blue-400" />

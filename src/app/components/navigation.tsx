@@ -32,7 +32,7 @@ export function Navigation() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="hidden font-bold sm:inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 neon-glow">
-              MotoInsights
+              {process.env.NEXT_PUBLIC_WEBSITE_NAME}
             </span>
           </Link>
           <nav className="hidden md:flex items-center space-x-4">
