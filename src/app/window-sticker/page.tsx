@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FileText, Zap, ShieldCheck, BarChart2 } from 'lucide-react'
 import Image from 'next/image'
 import { Plus, Paintbrush, Download } from 'lucide-react'
-import { SiteForm } from '../components/SiteForm'
+import SiteForm from '../components/SiteForm'
 
 const stickerFeatures = [
   { icon: FileText, title: "Complete Specs", description: "Every detail at your fingertips" },
@@ -20,7 +20,7 @@ export default function WindowStickerPage() {
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-background via-background/50 to-background text-gray-100">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <motion.div 
@@ -39,12 +39,12 @@ export default function WindowStickerPage() {
 
         {/* Search Form */}
         <div className='max-w-2xl mx-auto'>
-          <SiteForm reportType='WS'/>
+          <SiteForm formStyle='motorcyclecheck' reportType='WS'/>
         </div>
 
         {/* Features Section */}
         <motion.div 
-          className="grid md:grid-cols-2 gap-8 mb-16"
+          className="grid md:grid-cols-2 gap-8 my-16"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}

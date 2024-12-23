@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Shield, Clock, CheckCircle, AlertTriangle, ChevronRight, Star } from 'lucide-react'
 import Image from 'next/image'
-import { SiteForm } from '../components/SiteForm'
+import SiteForm from '../components/SiteForm'
 
 const popularStates = [
   'California', 'Texas', 'Florida', 'New York', 'Illinois',
@@ -57,7 +57,7 @@ const faqs = [
 
 export default function LicensePlateLookup() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-background via-background/50 to-background text-gray-100">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -74,7 +74,7 @@ export default function LicensePlateLookup() {
 
         {/* Search Form */}
         <div className="max-w-2xl mx-auto mb-16">
-          <SiteForm />
+          <SiteForm formStyle='motorcyclecheck' />
         </div>
 
         {/* What is Section */}

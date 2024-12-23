@@ -2,12 +2,13 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Shield, AlertTriangle, Clock, DollarSign } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function VehicleHistory() {
   return (
     <>
-      <section className="bg-gradient-to-b from-white to-gray-50 py-12 md:py-24">
-        <div className="container px-4">
+      <section className="bg-gradient-to-b from-background via-background/50 to-background text-gray-100 py-12 md:py-24">
+        <div className="container px-4 mx-auto">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="flex flex-col justify-center space-y-8">
               <div className="space-y-4">
@@ -19,17 +20,21 @@ export default function VehicleHistory() {
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Check Vehicle History
-                </Button>
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  View Sample Report
-                </Button>
+                <Link href={'/'}>
+                  <Button size="lg" className="w-full sm:w-auto">
+                    Check Vehicle History
+                  </Button>
+                </Link>
+                <Link href={'/sample'}>
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                    View Sample Report
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg"
+                src="/motorcycle-report.png"
                 alt="Vehicle History Report"
                 width={600}
                 height={400}
@@ -41,7 +46,7 @@ export default function VehicleHistory() {
       </section>
 
       <section className="py-20">
-        <div className="container px-4">
+        <div className="container px-4 mx-auto">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               What&apos;s Included in Your Report
@@ -91,8 +96,8 @@ export default function VehicleHistory() {
         </div>
       </section>
 
-      <section className="border-t bg-gray-50 py-20">
-        <div className="container px-4">
+      <section className="border-t bg-gradient-to-b from-background via-background/50 to-background text-gray-100 py-20">
+        <div className="container px-4 mx-auto">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="flex flex-col justify-center space-y-8">
               <div className="space-y-4">
@@ -132,7 +137,7 @@ export default function VehicleHistory() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg"
+                src="/Second_Section_Image_3.png"
                 alt="Report Features"
                 width={600}
                 height={400}

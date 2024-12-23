@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Exo_2 } from 'next/font/google'
-import { SiteForm } from './SiteForm'
+import SiteForm from './SiteForm'
 
 const exo2 = Exo_2({ subsets: ['latin'] })
 
@@ -60,7 +60,7 @@ export function HeroSection() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <SiteForm />
+              <SiteForm formStyle='motorcyclecheck' />
             </motion.div>
             <motion.p 
               className="text-sm text-gray-400"

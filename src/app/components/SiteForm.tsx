@@ -1,39 +1,39 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Search } from 'lucide-react'
-import Link from 'next/link'
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import VinLocationPopup from './VinLocationPopup';
 
 interface SiteFormProps {
-  reportType?: 'VHR' | 'WS'
-  reportStyle?: 'modern' | 'basic'
-  reportTab?: boolean
-  defaultTab?: 'vin' | 'plate'
+    reportType?: 'VHR' | 'WS'; // Define the allowed reportType values
+    reportStyle?: 'modern' | 'basic'; // Allowed style values
+    formStyle?: 'vehicleinsights' | 'motorcyclecheck' | 'canadawebsite'; // Allowed style values
+    reportTab?: boolean; // Optional boolean for tab visibility
+    defaultTab?: 'vin' | 'plate'; // Allowed default tab values
 }
 
-export function SiteForm({
+const SiteForm: React.FC<SiteFormProps> = ({ 
   reportType = 'VHR',
-  reportStyle = 'modern',
-  reportTab = true,
-  defaultTab = 'vin',
-}: SiteFormProps) {
-  const [activeTab, setActiveTab] = useState<string>(defaultTab)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [vin, setVin] = useState<string>('')
-  const [plate, setPlate] = useState<string>('')
-  const [state, setState] = useState<string>('')
-  const [email, setEmail] = useState<string>('')
-  const [phone, setPhone] = useState<string>('')
-  const [errors, setErrors] = useState<Record<string, string>>({})
-  const [refPage, setRefPage] = useState('')
-
-  console.log(reportStyle, reportTab);
-
+  reportStyle = 'modern',   // First option for reportStyle
+  formStyle = 'vehicleinsights',   // First option for formStyle
+  reportTab = true,         // Default to true
+  defaultTab = 'vin',       // First option for defaultTab
+}) => {
+  const [activeTab, setActiveTab] = useState<string>(defaultTab);
+  const [isLoading, setIsLoading] = useState<boolean>(false); // Add loading state
+  const [vin, setVin] = useState<string>('');
+  const [plate, setPlate] = useState<string>('');
+  const [state, setState] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
+  const [refPage, setRefPage] = useState('');
+  
   const states = [
     { code: 'AL', name: 'Alabama' },
     { code: 'AK', name: 'Alaska' },
@@ -85,210 +85,273 @@ export function SiteForm({
     { code: 'WV', name: 'West Virginia' },
     { code: 'WI', name: 'Wisconsin' },
     { code: 'WY', name: 'Wyoming' },
-  ]
+  ];
+
+  // Input validation and formatting
+  const handleVinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const uppercasedValue = e.target.value.toUpperCase();
+    setVin(uppercasedValue.slice(0, 17)); // Max length: 17
+  };
+
+  const handlePlateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const uppercasedValue = e.target.value.toUpperCase();
+    setPlate(uppercasedValue.slice(0, 8)); // Max length: 8
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const numericValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    setPhone(numericValue.slice(0, 15)); // Max length: 15
+  };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const url = window.location.href
+      const url = window.location.href;
+
       if (url === window.location.origin || url === `${window.location.origin}/`) {
-        setRefPage('homePage')
+        setRefPage('homePage');
       } else {
+        // Transform the URL by removing protocol, domain, and slashes
         const slug = url
-          .replace(window.location.origin, '')
-          .replace(/^\/|\/$/g, '')
-          .replace(/\//g, '_')
-        setRefPage(slug)
+          .replace(window.location.origin, '') // Remove origin
+          .replace(/^\/|\/$/g, '')            // Trim leading/trailing slashes
+          .replace(/\//g, '_');               // Replace slashes with underscores
+        setRefPage(slug);
       }
     }
-  }, [])
-
-  const handleVinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const uppercasedValue = e.target.value.toUpperCase()
-    setVin(uppercasedValue.slice(0, 17))
-  }
-
-  const handlePlateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const uppercasedValue = e.target.value.toUpperCase()
-    setPlate(uppercasedValue.slice(0, 8))
-  }
-
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const numericValue = e.target.value.replace(/\D/g, '')
-    setPhone(numericValue.slice(0, 15))
-  }
+  }, []);
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {}
+    const newErrors: Record<string, string> = {};
 
     if (activeTab === 'vin') {
       if (!vin || vin.length < 5 || vin.length > 17) {
-        newErrors.vin = 'VIN must be between 5 and 17 characters.'
+        newErrors.vin = 'VIN must be between 5 and 17 characters.';
       }
     } else if (activeTab === 'plate') {
       if (!plate || plate.length < 5 || plate.length > 8) {
-        newErrors.plate = 'License Plate must be between 5 and 8 characters.'
+        newErrors.plate = 'License Plate must be between 5 and 8 characters.';
       }
       if (!state) {
-        newErrors.state = 'State is required.'
+        newErrors.state = 'State is required.';
       }
     }
 
     if (!email) {
-      newErrors.email = 'Email is required.'
+        newErrors.email = 'Email is required.';
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = 'Please enter a valid email address.'
+    newErrors.email = 'Please enter a valid email address.';
     }
+      
 
     if (phone && (phone.length < 8 || phone.length > 15)) {
-      newErrors.phone = 'Phone number must be between 8 and 15 digits.'
+      newErrors.phone = 'Phone number must be between 8 and 15 digits.';
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-  const fetchVinData = async (stateInputValue: string, plateInputValue: string): Promise<string> => {
-    try {
-      const requestData = {
-        state: stateInputValue,
-        plate: plateInputValue,
-        email: 'test@test.com',
-      }
+    // Fetch license plate to VIN function
+    const fetchVinData = async (stateInputValue: string, plateInputValue: string): Promise<string> => {
+        try {
+          const requestData = {
+            state: stateInputValue,
+            plate: plateInputValue,
+            email: 'test@test.com', // Static email
+          };
+      
+          const apiUrl = 'https://app.detailedvehiclehistory.com/landing/get_license';
+      
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded', // Match the jQuery behavior
+            },
+            body: new URLSearchParams(requestData), // Use URLSearchParams for form data
+          });
+      
+          // Log the raw response for debugging
+          const rawResponse = await response.text();
+          console.log('Raw API Response:', rawResponse);
+      
+          // Parse response manually
+          const responseData = JSON.parse(rawResponse);
+          console.log('Parsed Response Data:', responseData);
+      
+          const { vin } = responseData;
+      
+          if (!vin) {
+            throw new Error('VIN not found in the response');
+          }
+      
+          return vin;
+        } catch (error) {
+          console.error('Failed to fetch VIN:', error);
+          throw error;
+        }
+      };
 
-      const apiUrl = 'https://app.detailedvehiclehistory.com/landing/get_license'
+    const handleSubmit = async () => {
 
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(requestData),
-      })
-
-      const rawResponse = await response.text()
-      console.log('Raw API Response:', rawResponse)
-
-      const responseData = JSON.parse(rawResponse)
-      console.log('Parsed Response Data:', responseData)
-
-      const { vin } = responseData
-
-      if (!vin) {
-        throw new Error('VIN not found in the response')
-      }
-
-      return vin
-    } catch (error) {
-      console.error('Failed to fetch VIN:', error)
-      throw error
-    }
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
     if (validateForm()) {
-      setIsLoading(true)
+      setIsLoading(true);
       if (activeTab === 'vin') {
-        console.log('Submitted Data:', { vin, email, phone })
+        console.log('Submitted Data:', { vin, email, phone });
         
-        setVin('')
-        setEmail('')
-        setPhone('')
+        // Reset form values
+        setVin('');
+        setEmail('');
+        setPhone('');
 
+        // Redirect with VIN data
         const redirectUrl = reportType === 'WS'
           ? `https://detailedvehiclehistory.com/vin-check/ws-preview?vin=${vin}&email=${email}&mobile=${phone}&ref=${refPage}`
-          : `https://detailedvehiclehistory.com/vin-check/preview?vin=${vin}&email=${email}&mobile=${phone}&ref=${refPage}`
+          : `https://detailedvehiclehistory.com/vin-check/preview?vin=${vin}&email=${email}&mobile=${phone}&ref=${refPage}`;
 
-        window.location.href = redirectUrl
+        window.location.href = redirectUrl;
       } else if (activeTab === 'plate') {
-        console.log('Submitted Data:', { plate, state, email, phone })
+        console.log('Submitted Data:', { plate, state, email, phone });
 
         try {
-          const fetchedVin = await fetchVinData(state, plate)
+            // Fetch the VIN based on state and license plate
+            const fetchedVin = await fetchVinData(state, plate);
     
-          console.log('Fetched VIN:', fetchedVin)
+            console.log('Fetched VIN:', fetchedVin);
     
-          setPlate('')
-          setState('')
-          setEmail('')
-          setPhone('')
-          
-          const redirectUrl = reportType === 'WS'
+            // Reset form values
+            setPlate('');
+            setState('');
+            setEmail('');
+            setPhone('');
+            
+            // Redirect with fetched VIN data
+            const redirectUrl = reportType === 'WS'
             ? `https://detailedvehiclehistory.com/vin-check/ws-preview?vin=${fetchedVin}&email=${email}&mobile=${phone}&ref=${refPage}`
-            : `https://detailedvehiclehistory.com/vin-check/preview?vin=${fetchedVin}&email=${email}&mobile=${phone}&ref=${refPage}`
-          
-          window.location.href = redirectUrl
-        } catch (error) {
-          alert('Error fetching VIN. Please try again.' + error)
-        } finally {
-          setIsLoading(false)
+            : `https://detailedvehiclehistory.com/vin-check/preview?vin=${fetchedVin}&email=${email}&mobile=${phone}&ref=${refPage}`;
+            
+            window.location.href = redirectUrl;
+            } catch (error) {
+              alert('Error fetching VIN. Please try again.' + error);
+            } finally {
+              setIsLoading(false); // Reset loading state
+            }
         }
       }
-    }
-  }
+    };
 
   return (
-    <Card className="glassmorphism mb-8">
-      <CardContent className="p-4">
-        <form onSubmit={handleSubmit}>
-          <Tabs defaultValue={activeTab} className="w-full" onValueChange={(value) => setActiveTab(value)}>
-            <TabsList className="grid w-full grid-cols-2 mb-4 bg-white/10">
-              <TabsTrigger value="vin" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">VIN</TabsTrigger>
-              <TabsTrigger value="plate" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">License Plate</TabsTrigger>
+    <Card id='siteForm' className={`bg-transparent ${reportStyle === 'basic' ? 'border-none shadow-none' : ''}`}>
+      <CardContent className={reportStyle === 'modern' ? 'p-6' : 'p-0'}>
+        {/* Tabs Section */}
+        <Tabs defaultValue={defaultTab} className="w-full" onValueChange={(val) => { setActiveTab(val); setErrors({}); }}>
+
+          {reportTab && (
+            <TabsList className="grid w-full grid-cols-2 mb-6">
+              <TabsTrigger value="vin">By VIN</TabsTrigger>
+              <TabsTrigger value="plate">By US License Plate</TabsTrigger>
             </TabsList>
-            <div className="space-y-2">
-              <div className="flex space-x-2">
+          )}
+
+          {/* Content Section */}
+          <div className="space-y-4">
+            {activeTab === 'vin' && (
+              <div>
                 <Input
-                  type="text"
-                  placeholder={activeTab === 'vin' ? "Enter VIN" : "Enter License Plate"}
-                  className="flex-1 bg-white/10 border-white/20 text-white placeholder-gray-400"
-                  value={activeTab === 'vin' ? vin : plate}
-                  onChange={activeTab === 'vin' ? handleVinChange : handlePlateChange}
+                  placeholder="Enter VIN Number"
+                  className="text-sm"
+                  value={vin}
+                  onChange={handleVinChange}
                 />
-                {activeTab === 'plate' && (
-                  <Select value={state} onValueChange={setState}>
-                    <SelectTrigger className="w-[180px] bg-white/10 border-white/20 text-white">
-                      <SelectValue placeholder="Select State" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {states.map((state) => (
-                        <SelectItem key={state.code} value={state.code}>
-                          {state.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                )}
+                {errors.vin && <p className="text-red-500 text-sm">{errors.vin}</p>}
               </div>
-              <div className="grid grid-cols-2 gap-2">
-                <Input
-                  type="tel"
-                  placeholder="Phone"
-                  value={phone}
-                  onChange={handlePhoneChange}
-                  className="bg-white/10 border-white/20 text-white placeholder-gray-400"
-                />
+            )}
+
+            {activeTab === 'plate' && (
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Input
+                    placeholder="License Plate"
+                    className="text-sm"
+                    value={plate}
+                    onChange={handlePlateChange}
+                  />
+                  {errors.plate && <p className="text-red-500 text-sm">{errors.plate}</p>}
+                </div>
+                <div>
+                  <select
+                    className="text-sm border rounded-md p-2 w-full bg-transparent"
+                    value={state}
+                    onChange={(e) => setState(e.target.value)}
+                  >
+                    <option value="">Select State</option>
+                    {states.map((state, index) => (
+                        <option key={index} value={state.code} className='text-black'>
+                        {state.name}
+                        </option>
+                    ))}
+                  </select>
+                  {errors.state && <p className="text-red-500 text-sm">{errors.state}</p>}
+                </div>
+              </div>
+            )}
+
+            {/* Email and Phone Section */}
+            <div className="grid grid-cols-2 gap-4">
+              <div>
                 <Input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email Address"
                   value={email}
+                  className="text-sm"
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white/10 border-white/20 text-white placeholder-gray-400"
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:scale-105" disabled={isLoading}>
-                <Search className="mr-2 h-4 w-4" /> {isLoading ? 'Searching...' : 'Search Motorcycle History'}
-              </Button>
+              <div>
+                <Input
+                  type="tel"
+                  placeholder="Phone (Optional)"
+                  value={phone}
+                  className="text-sm"
+                  onChange={handlePhoneChange}
+                />
+                {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+              </div>
             </div>
-          </Tabs>
-        </form>
-        {Object.entries(errors).map(([key, value]) => (
-          <p key={key} className="text-red-500 text-sm mt-1">{value}</p>
-        ))}
-        <p className="text-sm text-gray-400 mt-2">
-          No VIN? <Link href="#" className="text-blue-400 hover:underline">Find it here</Link>
-        </p>
+
+            {/* Search Button */}
+            <Button 
+              className={`w-full ${
+                formStyle === 'motorcyclecheck' 
+                  ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                  : formStyle === 'canadawebsite'
+                    ? 'bg-red-600 hover:bg-red-700 text-white'
+                    : ''
+              }`} 
+              onClick={handleSubmit} disabled={isLoading}>
+              {isLoading ? 'Please wait...' : 'Search'}
+            </Button>
+
+
+            {/* Links Section */}
+            <div className="flex justify-between text-sm text-gray-500 mt-2">
+              <Link
+                  href="#"
+                  className="hover:text-blue-600"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsPopupOpen(true);
+                  }}
+                >
+                Where can I find the VIN?
+              </Link>
+            </div>
+          </div>
+        </Tabs>
+        <VinLocationPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
       </CardContent>
     </Card>
-  )
-}
+  );
+};
+
+export default SiteForm;

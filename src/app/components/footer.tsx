@@ -6,7 +6,7 @@ const navigation = [
     title: "Motorcycle Reports",
     links: [
       { name: "Sample report", href: "/sample" },
-      { name: "VIN Lookup", href: "/#chat" },
+      { name: "VIN Lookup", href: "/vehicle-history" },
       { name: "License Plate Search", href: "/license-plate-lookup" }
     ]
   },
