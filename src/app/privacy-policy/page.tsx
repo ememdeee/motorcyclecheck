@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-gray-300 mb-8">
-              Thank you for visiting the website located at https://motoinsights.com (&apos;the Site&apos;). The Site is an Internet property of our company and its affiliated companies (&apos;We&apos;, &apos;we&apos; or &apos;us&apos;). This online privacy policy provides details about how We handle information that we collect about you. By visiting this Site, you are accepting the practices described in this privacy policy (&apos;Privacy Policy&apos;). This Privacy Policy covers our treatment of Personal Information (as defined below) that we gather when you are accessing or using our Site. This Privacy Policy does not apply to the practices of companies that we do not own or control, or to individuals that we do not employ or manage. Personal Information that you submit to other websites will be subject to the privacy policies of those sites. We encourage you to carefully read the privacy policy of any website you visit.
+              Thank you for visiting the website located at https://{process.env.NEXT_PUBLIC_WEBSITE_NAME}.com (&apos;the Site&apos;). The Site is an Internet property of our company and its affiliated companies (&apos;We&apos;, &apos;we&apos; or &apos;us&apos;). This online privacy policy provides details about how We handle information that we collect about you. By visiting this Site, you are accepting the practices described in this privacy policy (&apos;Privacy Policy&apos;). This Privacy Policy covers our treatment of Personal Information (as defined below) that we gather when you are accessing or using our Site. This Privacy Policy does not apply to the practices of companies that we do not own or control, or to individuals that we do not employ or manage. Personal Information that you submit to other websites will be subject to the privacy policies of those sites. We encourage you to carefully read the privacy policy of any website you visit.
             </p>
 
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">Your IP Address</h2>
@@ -92,11 +92,11 @@ export default function PrivacyPolicy() {
             <p className="text-gray-300 mb-8">
               If you have any questions about this Privacy Policy, please contact us at:
               <br /><br />
-              MotoInsights<br />
+              {process.env.NEXT_PUBLIC_WEBSITE_NAME}<br />
               2196 3rd Ave #4001<br />
               New York, NY<br />
               United States<br />
-              Email: privacy@motoinsights.com<br />
+              Email: {process.env.NEXT_PUBLIC_WEBSITE_EMAIL}<br />
               Phone: (866) 593-4553
             </p>
           </motion.div>

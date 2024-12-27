@@ -9,7 +9,7 @@ const guarantees = [
   {
     icon: Shield,
     title: "100% Satisfaction Promise",
-    description: "Not happy? We'll make it right or your money back. No questions asked."
+    description: "Not happy? Let us know—we are here to help and will work with you to make it right, including processing refunds if needed."
   },
   {
     icon: Lock,
@@ -41,7 +41,7 @@ export function SatisfactionGuaranteedSection() {
             </p>
             <div className="bg-white p-6 rounded-lg shadow-md mt-8 border border-blue-100">
               <h3 className="text-xl font-semibold mb-2 text-gray-800">What Our Customers Say</h3>
-              <p className="text-gray-600 italic mb-4">&apos;I was skeptical at first, but their guarantees are the real deal. When I had an issue, they resolved it faster than I could say &apos;VIN number&apos;!</p>
+              <p className="text-gray-600 italic mb-4">At first, I thought their bold claims were just marketing fluff, but they delivered beyond expectations. Outstanding service—I&apos;m a customer for life!</p>
               <p className="text-gray-700 font-semibold">- Sarah T., Happy Customer</p>
             </div>
           </div>

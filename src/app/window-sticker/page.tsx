@@ -33,7 +33,7 @@ export default function WindowStickerPage() {
             Showcase Your Motorcycle Like Never Before
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            The Window Sticker tool by MotoInsights is your ultimate solution to make your motorcycle stand out. Whether you&apos;re selling, showcasing, or just taking pride in your ride, our customizable window stickers add the perfect finishing touch.
+            The Window Sticker tool by {process.env.NEXT_PUBLIC_WEBSITE_NAME} is your ultimate solution to make your motorcycle stand out. Whether you&apos;re selling, showcasing, or just taking pride in your ride, our customizable window stickers add the perfect finishing touch.
           </p>
         </motion.div>
 
@@ -223,7 +223,7 @@ export default function WindowStickerPage() {
           </div>
         </motion.div>
 
-        {/* Key Features of MotoInsights Window Stickers Section */}
+        {/* Key Features of Site Window Stickers Section */}
         <motion.div 
           className="mb-16"
           initial={{ y: 50, opacity: 0 }}
@@ -231,7 +231,7 @@ export default function WindowStickerPage() {
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <h2 className="text-3xl font-bold mb-8 text-center text-white neon-glow text-shadow-lg">
-            Key Features of MotoInsights Window Stickers
+            Key Features of {process.env.NEXT_PUBLIC_WEBSITE_NAME} Window Stickers
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[

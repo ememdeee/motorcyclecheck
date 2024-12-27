@@ -29,7 +29,7 @@ export function HeroSection() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
-              Welcome to MotoInsights
+              Welcome to {process.env.NEXT_PUBLIC_WEBSITE_NAME}
             </motion.h1>
             <motion.h2 
               className={`${exo2.className} text-3xl md:text-4xl font-bold mb-4 text-white`}
@@ -53,17 +53,17 @@ export function HeroSection() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Are you buying or selling a motorcycle? Want to know its full story or show off its true value? We got you covered! At MotoInsights, we provide comprehensive motorcycle reports and customizable window stickers to help you make informed decisions and showcase your bike like a pro.
+              Are you buying or selling a motorcycle? Want to know its full story or show off its true value? We got you covered! At {process.env.NEXT_PUBLIC_WEBSITE_NAME}, we provide comprehensive motorcycle reports and customizable window stickers to help you make informed decisions and showcase your bike like a pro.
             </motion.p>
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <SiteForm formStyle='motorcyclecheck' />
+              <SiteForm reportTab={false} formStyle='motorcyclecheck' />
             </motion.div>
             <motion.p 
-              className="text-sm text-gray-400"
+              className="text-sm text-gray-400 mt-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}

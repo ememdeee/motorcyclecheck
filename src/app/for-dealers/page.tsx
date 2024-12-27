@@ -38,7 +38,7 @@ export default function ForDealersPage() {
             Empower Your Dealership
           </h1>
           <Badge variant="secondary" className="mb-4 bg-blue-500 text-white px-4 py-1 text-lg">
-            Partner with MotoInsights
+            Partner with {process.env.NEXT_PUBLIC_WEBSITE_NAME}
           </Badge>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
             Step into the future of motorcycle retail. Enhance your dealership with our cutting-edge motorcycle history reports and holographic window sticker solutions.
@@ -95,7 +95,7 @@ export default function ForDealersPage() {
                     <div className="bg-purple-500/20 p-3 rounded-full group-hover:bg-purple-500/40 transition-all duration-300">
                       <Mail className="h-6 w-6 text-purple-400" />
                     </div>
-                    <span className="text-gray-300 group-hover:text-purple-300 transition-all duration-300">Secure Mail: dealers@motoinsights.com</span>
+                    <span className="text-gray-300 group-hover:text-purple-300 transition-all duration-300">Secure Mail: {process.env.NEXT_PUBLIC_WEBSITE_EMAIL}</span>
                   </div>
                   <div className="flex items-center space-x-4 group">
                     <div className="bg-green-500/20 p-3 rounded-full group-hover:bg-green-500/40 transition-all duration-300">

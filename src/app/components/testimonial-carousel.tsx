@@ -7,7 +7,7 @@ import { Wrench, Compass, Shield } from 'lucide-react'
 const testimonials = [
   {
     name: "Alex R.",
-    content: "MotoInsights gave me the confidence to buy my dream bike!",
+    content: `${process.env.NEXT_PUBLIC_WEBSITE_NAME} gave me the confidence to buy my dream bike!`,
   },
   {
     name: "Jamie T.",

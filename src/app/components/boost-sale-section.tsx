@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { TrendingUp, Shield, Clock, Zap } from 'lucide-react'
 import { Input } from "@/components/ui/input"
+import { HoverToForm } from './HoverToForm copy'
 
 export function BoostSaleSection() {
   return (
@@ -41,39 +42,20 @@ export function BoostSaleSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold tracking-tight text-gray-100 mb-6">
-              Window Stickers Turn Heads at Every Stop
+            Window Stickers That Demand Attention
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Want to make your motorcycle irresistible to buyers or just stand out at bike meets? Our customizable window stickers are the perfect touch!
+            Want to elevate your motorcycle's appeal to buyers or make a statement at your next ride event? Our premium window stickers are designed to impress!
             </p>
-            <div className="mb-8">
-              <form className="flex flex-col space-y-4">
-                <Input
-                  type="text"
-                  placeholder="Enter your motorcycle's VIN"
-                  className="flex-grow bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                />
-                <div className="flex space-x-4 mt-4 w-full">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-grow bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                  />
-                  <Input
-                    type="tel"
-                    placeholder="Enter your phone"
-                    className="flex-grow bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                  />
-                </div>
-                
-              </form>
-            </div>
+
+            <HoverToForm>
             <Button 
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300"
             >
               Grab Your Power Report
             </Button>
+            </HoverToForm>
           </motion.div>
         </div>
       </div>

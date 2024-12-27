@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
+import { HoverToForm } from './HoverToForm'
 
 export function CTASection() {
   return (
@@ -33,9 +34,11 @@ export function CTASection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
+          <HoverToForm className='m-auto'>
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 relative z-10 neon-border">
             Get Your Report Now <ChevronRight className="ml-2 h-5 w-5" />
           </Button>
+          </HoverToForm>
         </motion.div>
       </div>
     </section>

@@ -13,24 +13,10 @@ const sampleData = {
     {
       type: "Sport",
       samples: [
-        { title: "2023 Yamaha YZF-R1", date: "09/2023", vin: "JYARN32E6LA000001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" },
-        { title: "2022 Kawasaki Ninja ZX-10R", date: "08/2023", vin: "JKBZXJC1NBA00001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" },
-        { title: "2021 Honda CBR1000RR-R", date: "07/2023", vin: "JH2SC82A1MK000001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" },
-        { title: "2020 Ducati Panigale V4", date: "06/2023", vin: "ZDMVAREV1LB000001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" }
-      ]
-    },
-    {
-      type: "Cruiser",
-      samples: [
-        { title: "2023 Harley-Davidson Street Glide", date: "09/2023", vin: "1HD1KTC1XPB000001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" },
-        { title: "2022 Indian Chief", date: "08/2023", vin: "56KTCAAA1N3000001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" }
-      ]
-    },
-    {
-      type: "Adventure",
-      samples: [
-        { title: "2023 BMW R 1250 GS", date: "09/2023", vin: "WB10A0107PZ000001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" },
-        { title: "2022 KTM 1290 Super Adventure", date: "08/2023", vin: "VBKV39403NM000001", imageUrl:"/report-sample.jpg", url: "/report/vin/2T1BURHE0FC320645" }
+        { title: "2023 Harley-Davidson Softail Low Rider", vin: "1HD1YWZ1XPB032365", imageUrl:"/SR_1.png", url: "/report/vin/1HD1YWZ1XPB032365" },
+        { title: "2006 Honda CBR 600F4i", vin: "JH2PC35106M700635", imageUrl:"/SR_2.png", url: "/report/vin/JH2PC35106M700635" },
+        { title: "2009 Kawasaki ER-6n", vin: "JH2SC82A1MK000001", imageUrl:"/SR_3.png", url: "/report/vin/JKAEREC149DA30828" },
+        { title: "2024 Can-Am Ryker Sport 900 ACE", vin: "ZDMVAREV1LB000001", imageUrl:"/SR_4.png", url: "/report/vin/3JB2JEG40RJ000543" }
       ]
     }
   ],
@@ -38,24 +24,24 @@ const sampleData = {
     {
       type: "Sport",
       samples: [
-        { title: "2023 Ducati Streetfighter V4", date: "09/2023", vin: "ZDMVAKFV1PB000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2022 Suzuki GSX-R1000R", date: "08/2023", vin: "JS1GT7MA1M2100001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2021 Aprilia RSV4", date: "07/2023", vin: "ZD4KGP009MS000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2020 BMW S1000RR", date: "06/2023", vin: "WB10E0102LZ000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
+        { title: "2023 Ducati Streetfighter V4", vin: "ZDMVAKFV1PB000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
+        { title: "2022 Suzuki GSX-R1000R", vin: "JS1GT7MA1M2100001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
+        { title: "2021 Aprilia RSV4", vin: "ZD4KGP009MS000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
+        { title: "2020 BMW S1000RR", vin: "WB10E0102LZ000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
       ]
     },
     {
       type: "Cruiser",
       samples: [
-        { title: "2023 Indian Challenger", date: "09/2023", vin: "56KTCAAA3N3000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2022 Triumph Rocket 3", date: "08/2023", vin: "SMTD01FS5NT000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
+        { title: "2023 Indian Challenger", vin: "56KTCAAA3N3000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
+        { title: "2022 Triumph Rocket 3", vin: "SMTD01FS5NT000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
       ]
     },
     {
       type: "Adventure",
       samples: [
-        { title: "2023 Yamaha Ténéré 700", date: "09/2023", vin: "JYADP1C11LA000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2022 Ducati Multistrada V4", date: "08/2023", vin: "ZDMVAKFV1PB000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
+        { title: "2023 Yamaha Ténéré 700", vin: "JYADP1C11LA000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
+        { title: "2022 Ducati Multistrada V4", vin: "ZDMVAKFV1PB000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
       ]
     }
   ]
@@ -120,10 +106,9 @@ export default function SamplePage() {
                               {sample.title}
                             </h3>
                             <div className="text-sm text-gray-500">
-                              <p>Report Date: {sample.date}</p>
                               <p className="truncate">VIN: {sample.vin}</p>
                             </div>
-                            <Link href={sample.url}>
+                            <Link href={sample.url} target='_blank' className='mt-4 block'>
                               <Button 
                                 variant="ghost" 
                                 className="w-full hover:bg-blue-900/50 transition-colors duration-300 neon-border"
@@ -174,10 +159,9 @@ export default function SamplePage() {
                               {sample.title}
                             </h3>
                             <div className="text-sm text-gray-500">
-                              <p>Sticker Date: {sample.date}</p>
                               <p className="truncate">VIN: {sample.vin}</p>
                             </div>
-                            <Link href={sample.url}>
+                            <Link href={sample.url} className='mt-4 block'>
                               <Button 
                                 variant="ghost" 
                                 className="w-full hover:bg-blue-900/50 transition-colors duration-300 neon-border"
@@ -196,21 +180,6 @@ export default function SamplePage() {
           </TabsContent>
         </Tabs>
 
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-semibold text-gray-200 mb-6">Looking for a Specific Motorcycle Brand?</h2>
-          <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {motorcycleBrands.map((brand) => (
-              <Link
-                key={brand}
-                href="#"
-                className="px-4 py-2 bg-gray-800/50 rounded-lg hover:bg-blue-900/50 transition-colors duration-300 text-sm text-gray-300 hover:text-blue-400 whitespace-nowrap overflow-hidden text-ellipsis neon-border"
-              >
-                {brand}
-              </Link>
-            ))}
-          </div>
-        </div>
-
         <div className="mt-16 text-center bg-gradient-to-r from-blue-900/50 to-purple-900/50 text-white rounded-xl p-8 glassmorphism">
           <h2 className="text-2xl font-bold mb-4 neon-glow">
             Ready to Get Your {activeTab === "report" ? "Motorcycle History Report" : "Motorcycle Window Sticker"}?
@@ -218,9 +187,11 @@ export default function SamplePage() {
           <p className="mb-6 text-blue-200">
             Access comprehensive motorcycle information instantly
           </p>
+          <Link href={'/'}>
           <Button size="lg" variant="secondary" className="hover:bg-blue-400 transition-all duration-300 neon-border">
             Get Started Now
           </Button>
+          </Link>
         </div>
       </div>
     </div>

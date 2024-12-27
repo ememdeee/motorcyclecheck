@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { History, AlertTriangle, PenToolIcon as Tool, FileCheck } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { HoverToForm } from './HoverToForm'
 
 const features = [
   {
@@ -88,9 +89,11 @@ export function FeatureShowcase() {
           <p className="text-xl text-gray-300 mb-6">
             Don&apos;t just take a chance — ride with confidence knowing the bike&apos;s full history.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 neon-border">
-            Get Your Report Now
-          </Button>
+            <HoverToForm className='m-auto'>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 neon-border">
+              Get Your Report Now
+            </Button>
+            </HoverToForm>
         </motion.div>
       </div>
     </section>

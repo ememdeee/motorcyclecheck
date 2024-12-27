@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat
 const exo2 = Exo_2({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MotoInsights - Motorcycle History Reports & Specs',
+  title: `${process.env.NEXT_PUBLIC_WEBSITE_NAME} - Motorcycle History Reports & Specs`,
   description: 'Get comprehensive motorcycle history reports and detailed specifications. Buy and sell motorcycles with confidence using verified history.',
 }
 

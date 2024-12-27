@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Headphones, Clock, Star, Users } from 'lucide-react'
+import Link from "next/link"
 
 const supportFeatures = [
   {
@@ -61,16 +62,15 @@ export function ExpertSupportSection() {
         </div>
 
 
-        <div className="text-center">
+        <a href="https://direct.lc.chat/17516280/" target="_blank" className="block text-center">
           <Button 
             size="lg"
             className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300"
           >
             Get Expert Help Now
           </Button>
-        </div>
+        </a>
       </div>
     </section>
   )
 }
-

@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "How quickly can I access a report?",
-    answer: "Our reports are generated instantly. As soon as you enter the VIN or license plate and complete the purchase, you'll have immediate access to the full report. No waiting required!"
+    answer: "Our reports are generated instantly. As soon as you enter the VIN and complete the purchase, you'll have immediate access to the full report. No waiting required!"
   },
   {
     question: "Can I use your service for motorcycles outside the United States?",

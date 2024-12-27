@@ -17,7 +17,7 @@ export function MarketValueSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold tracking-tight text-gray-100">
-              Why Choose MotoInsights?
+              Why Choose {process.env.NEXT_PUBLIC_WEBSITE_NAME}?
             </h2>
             <p className="text-xl text-gray-300">
               We&apos;re not just about motorcycles; we&apos;re about the riders, the thrill of the ride, and making every decision the right one. When you choose us, you get:

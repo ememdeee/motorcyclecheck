@@ -20,7 +20,7 @@ const navItems = [
   { href: '/contact', label: 'Contact' },
 ]
 
-export const siteTitle = 'MotoInsights - Motorcycle History Reports & Specs';
+export const siteTitle = `${process.env.NEXT_PUBLIC_WEBSITE_NAME} Motorcycle History Reports & Specs`;
 
 export function Navigation() {
   const pathname = usePathname()

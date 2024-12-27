@@ -78,21 +78,21 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">1. AGREEMENT</h2>
             <p className="text-gray-300 mb-8">
-              Welcome to MotoInsights.com! The representations of our services and products available through this website do not constitute a binding offer. By clicking &apos;SEARCH&apos; or &apos;SHOW ME MY REPORT&apos; or &apos;YES, CONTINUE TO MY REPORT,&apos; You agree to be bound to these Terms of Use (the &apos;Agreement&apos;), constituting a legally binding agreement by and between MotoInsights, (hereinafter, &apos;MotoInsights&apos; or &apos;We&apos; or &apos;Our&apos;) and you (in either case, &apos;You&apos; or &apos;Your&apos;) concerning Your use of MotoInsights website (the &apos;Website&apos;) and the services available through the Website (the &apos;Services&apos;).
+              Welcome to {process.env.NEXT_PUBLIC_WEBSITE_NAME}! The representations of our services and products available through this website do not constitute a binding offer. By clicking &apos;SEARCH&apos; or &apos;SHOW ME MY REPORT&apos; or &apos;YES, CONTINUE TO MY REPORT,&apos; You agree to be bound to these Terms of Use (the &apos;Agreement&apos;), constituting a legally binding agreement by and between {process.env.NEXT_PUBLIC_WEBSITE_NAME}, (hereinafter, &apos;{process.env.NEXT_PUBLIC_WEBSITE_NAME}&apos; or &apos;We&apos; or &apos;Our&apos;) and you (in either case, &apos;You&apos; or &apos;Your&apos;) concerning Your use of {process.env.NEXT_PUBLIC_WEBSITE_NAME} website (the &apos;Website&apos;) and the services available through the Website (the &apos;Services&apos;).
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">2. PRIVACY POLICY</h2>
             <p className="text-gray-300 mb-8">
-              MotoInsights collects identifying and billing information including name, address, credit card information and e-mail address when consumers register for our services. Any personally identifiable information you provide to us including your email and phone number may be used to notify you of new products, product changes or offer discounts up to 50%.
+              {process.env.NEXT_PUBLIC_WEBSITE_NAME} collects identifying and billing information including name, address, credit card information and e-mail address when consumers register for our services. Any personally identifiable information you provide to us including your email and phone number may be used to notify you of new products, product changes or offer discounts up to 50%.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">3. CHANGES TO AGREEMENT AND PRIVACY POLICY</h2>
             <p className="text-gray-300 mb-8">
-              Internet technology and the applicable laws, rules, and regulations change frequently. Accordingly, MotoInsights reserves the right to change this agreement and its privacy policy at any time upon notice to you, to be given by the posting of a new version or a change notice on the website.
+              Internet technology and the applicable laws, rules, and regulations change frequently. Accordingly, {process.env.NEXT_PUBLIC_WEBSITE_NAME} reserves the right to change this agreement and its privacy policy at any time upon notice to you, to be given by the posting of a new version or a change notice on the website.
             </p>
           </section>
 
@@ -106,28 +106,28 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">5. ROLE</h2>
             <p className="text-gray-300 mb-8">
-              Without limitation, you agree that MotoInsights is merely a technology solution that serves as a third-party platform and you use the Website and Services at Your own risk, without limitation and pursuant to Section: ASSUMPTION OF RISK; RELEASE.
+              Without limitation, you agree that {process.env.NEXT_PUBLIC_WEBSITE_NAME} is merely a technology solution that serves as a third-party platform and you use the Website and Services at Your own risk, without limitation and pursuant to Section: ASSUMPTION OF RISK; RELEASE.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">6. LICENSE</h2>
             <p className="text-gray-300 mb-8">
-              Unless otherwise stated, MotoInsights owns the intellectual property rights for all material on https://www.motoinsights.com/. All intellectual property rights are reserved. You may view and/or print pages from https://www.motoinsights.com/ for your own personal use subject to restrictions set in these terms and conditions.
+              Unless otherwise stated, {process.env.NEXT_PUBLIC_WEBSITE_NAME} owns the intellectual property rights for all material on https://www.{process.env.NEXT_PUBLIC_WEBSITE_NAME}.com/. All intellectual property rights are reserved. You may view and/or print pages from https://www.{process.env.NEXT_PUBLIC_WEBSITE_NAME}.com/ for your own personal use subject to restrictions set in these terms and conditions.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">7. NO RELIANCE ON THIRD PARTY CONTENT</h2>
             <p className="text-gray-300 mb-8">
-              The information on the Website is provided for information purposes only. The Website and Services are provided only as a technology solution and MotoInsights shall not be liable for any delay or failure to make available the Report.
+              The information on the Website is provided for information purposes only. The Website and Services are provided only as a technology solution and {process.env.NEXT_PUBLIC_WEBSITE_NAME} shall not be liable for any delay or failure to make available the Report.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">8. ASSUMPTION OF RISK; RELEASE</h2>
             <p className="text-gray-300 mb-8">
-              You knowingly and freely assume all risk when using the website and services. You, on behalf of yourself, your personal representatives, and your heirs, hereby voluntarily agree to release, waive, discharge, hold harmless, defend, and indemnify MotoInsights and its stockholders, officers, directors, employees, agents, affiliates, consultants, representatives, sublicenses, successors, and assigns from any and all claims, actions, or losses for bodily injury, property damage, wrongful death, emotional distress, loss of privacy, or other damages or harm, whether to you or to third parties, that may result from your use of the website and services.
+              You knowingly and freely assume all risk when using the website and services. You, on behalf of yourself, your personal representatives, and your heirs, hereby voluntarily agree to release, waive, discharge, hold harmless, defend, and indemnify {process.env.NEXT_PUBLIC_WEBSITE_NAME} and its stockholders, officers, directors, employees, agents, affiliates, consultants, representatives, sublicenses, successors, and assigns from any and all claims, actions, or losses for bodily injury, property damage, wrongful death, emotional distress, loss of privacy, or other damages or harm, whether to you or to third parties, that may result from your use of the website and services.
             </p>
           </section>
 
@@ -141,21 +141,21 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">10. RESERVED RIGHTS FOR FEES</h2>
             <p className="text-gray-300 mb-8">
-              You acknowledge and agree that MotoInsights reserves the right to charge for access to the Website and use of the Services, in accordance with the Fees that are clearly disclosed throughout the Website.
+              You acknowledge and agree that {process.env.NEXT_PUBLIC_WEBSITE_NAME} reserves the right to charge for access to the Website and use of the Services, in accordance with the Fees that are clearly disclosed throughout the Website.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">11. THIRD-PARTY WEBSITES</h2>
             <p className="text-gray-300 mb-8">
-              The Website is linked with the websites of third parties (&apos;Third-Party Websites&apos;), some of whom may have established relationships with MotoInsights and some of whom may not. MotoInsights does not have control over the content and performance of Third-Party Websites.
+              The Website is linked with the websites of third parties (&apos;Third-Party Websites&apos;), some of whom may have established relationships with {process.env.NEXT_PUBLIC_WEBSITE_NAME} and some of whom may not. {process.env.NEXT_PUBLIC_WEBSITE_NAME} does not have control over the content and performance of Third-Party Websites.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">12. PROHIBITED USES</h2>
             <p className="text-gray-300 mb-8">
-              MotoInsights imposes certain restrictions on your use of the Website and the Services. You represent and warrant that you will not engage in any prohibited activities, including but not limited to: stalking, harassing, impersonating others, or collecting information about users without their consent.
+              {process.env.NEXT_PUBLIC_WEBSITE_NAME} imposes certain restrictions on your use of the Website and the Services. You represent and warrant that you will not engage in any prohibited activities, including but not limited to: stalking, harassing, impersonating others, or collecting information about users without their consent.
             </p>
           </section>
 
@@ -169,21 +169,21 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">14. DISCLAIMERS; LIMITATION OF LIABILITY</h2>
             <p className="text-gray-300 mb-8">
-              This site is provided by MotoInsights on an &apos;as is&apos; and &apos;as available&apos; basis. MotoInsights does not specifically warrant or guarantee the accuracy of its search reports. MotoInsights makes no representations or warranties regarding any liens or security interests filed after the date and time indicated on the report.
+              This site is provided by {process.env.NEXT_PUBLIC_WEBSITE_NAME} on an &apos;as is&apos; and &apos;as available&apos; basis. {process.env.NEXT_PUBLIC_WEBSITE_NAME} does not specifically warrant or guarantee the accuracy of its search reports. {process.env.NEXT_PUBLIC_WEBSITE_NAME} makes no representations or warranties regarding any liens or security interests filed after the date and time indicated on the report.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">15. YOUR REPRESENTATIONS AND WARRANTIES</h2>
             <p className="text-gray-300 mb-8">
-              You represent and warrant that your use of the Website and Services will be in accordance with this Agreement and any other MotoInsights policies, and with any applicable laws or regulations.
+              You represent and warrant that your use of the Website and Services will be in accordance with this Agreement and any other {process.env.NEXT_PUBLIC_WEBSITE_NAME} policies, and with any applicable laws or regulations.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">16. INDEMNITY BY YOU</h2>
             <p className="text-gray-300 mb-8">
-              Without limiting any indemnification provision of this Agreement, You (the &apos;Indemnitor&apos;) agree to defend, indemnify and hold harmless MotoInsights and the Parties (collectively, the &apos;Indemnities&apos;) from and against any and all claims, actions, demands, causes of action, and other proceedings (collectively, &apos;Claims&apos;), including but not limited to legal costs and fees.
+              Without limiting any indemnification provision of this Agreement, You (the &apos;Indemnitor&apos;) agree to defend, indemnify and hold harmless {process.env.NEXT_PUBLIC_WEBSITE_NAME} and the Parties (collectively, the &apos;Indemnities&apos;) from and against any and all claims, actions, demands, causes of action, and other proceedings (collectively, &apos;Claims&apos;), including but not limited to legal costs and fees.
             </p>
           </section>
 
@@ -197,14 +197,14 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">18. TERMINATION</h2>
             <p className="text-gray-300 mb-8">
-              Without limiting any other provision of this agreement, MotoInsights reserves the right to, in sole discretion and without notice or liability, deny use of the website and/or services to any person for any reason or for no reason at all, including without limitation for any breach or suspected breach of any representation, warranty, or covenant contained in this agreement, or of any applicable law or regulation.
+              Without limiting any other provision of this agreement, {process.env.NEXT_PUBLIC_WEBSITE_NAME} reserves the right to, in sole discretion and without notice or liability, deny use of the website and/or services to any person for any reason or for no reason at all, including without limitation for any breach or suspected breach of any representation, warranty, or covenant contained in this agreement, or of any applicable law or regulation.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">19. NOTICES</h2>
             <p className="text-gray-300 mb-8">
-              All notices required or permitted to be given under this Agreement must be in writing. MotoInsights shall give any notice by email sent to the most recent email address, if any, provided by the intended recipient to MotoInsights. You agree that any notice received from MotoInsights electronically satisfies any legal requirement that such notice be in writing.
+              All notices required or permitted to be given under this Agreement must be in writing. {process.env.NEXT_PUBLIC_WEBSITE_NAME} shall give any notice by email sent to the most recent email address, if any, provided by the intended recipient to {process.env.NEXT_PUBLIC_WEBSITE_NAME}. You agree that any notice received from {process.env.NEXT_PUBLIC_WEBSITE_NAME} electronically satisfies any legal requirement that such notice be in writing.
             </p>
           </section>
 
@@ -218,12 +218,12 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mt-12 mb-4 text-blue-300">21. GENERAL</h2>
             <p className="text-gray-300 mb-8">
-              This Agreement constitutes the entire agreement between MotoInsights and You concerning your use of the Website and Services. This Agreement may only be modified by a written amendment signed by an authorized executive of MotoInsights or by the unilateral amendment of this Agreement by MotoInsights and by the posting by MotoInsights of such amended version. A waiver by either party of any term or condition of this Agreement or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof.
+              This Agreement constitutes the entire agreement between {process.env.NEXT_PUBLIC_WEBSITE_NAME} and You concerning your use of the Website and Services. This Agreement may only be modified by a written amendment signed by an authorized executive of {process.env.NEXT_PUBLIC_WEBSITE_NAME} or by the unilateral amendment of this Agreement by {process.env.NEXT_PUBLIC_WEBSITE_NAME} and by the posting by {process.env.NEXT_PUBLIC_WEBSITE_NAME} of such amended version. A waiver by either party of any term or condition of this Agreement or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof.
             </p>
           </section>
         </motion.div>
         <p className="text-sm text-gray-400 text-center mt-12">
-          © {new Date().getFullYear()} MotoInsights. All rights reserved.
+          © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}. All rights reserved.
         </p>
       </div>
     </div>

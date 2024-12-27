@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 
 const navigation = [
   {
@@ -7,7 +6,7 @@ const navigation = [
     links: [
       { name: "Sample report", href: "/sample" },
       { name: "VIN Lookup", href: "/vehicle-history" },
-      { name: "License Plate Search", href: "/license-plate-lookup" }
+      // { name: "License Plate Search", href: "/license-plate-lookup" }
     ]
   },
   {
@@ -21,20 +20,20 @@ const navigation = [
     title: "Services",
     links: [
       { name: "Pricing", href: "/pricing" },
-      { name: "For Dealers", href: "/for-dealers" },
+      // { name: "For Dealers", href: "/for-dealers" },
     ]
   },
   {
     title: "Company",
     links: [
-      { name: "About Us", href: "/about" },
+      // { name: "About Us", href: "/about" },
       { name: "Contact", href: "/contact" },
     ]
   },
   {
     title: "Legal",
     links: [
-      { name: "Terms of Service", href: "/terms" },
+      { name: "Terms of Service", href: "/terms-and-conditions" },
       { name: "Privacy Policy", href: "/privacy" },
     ]
   }
@@ -63,7 +62,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-12 border-t pt-8 text-center">
-          <div className="flex justify-center space-x-4 mb-4">
+          {/* <div className="flex justify-center space-x-4 mb-4">
             <Link href="#" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">
               <Facebook className="h-5 w-5" />
             </Link>
@@ -76,7 +75,7 @@ export function Footer() {
             <Link href="#" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">
               <Linkedin className="h-5 w-5" />
             </Link>
-          </div>
+          </div> */}
           <p className="text-sm text-gray-300">
             © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}. All rights reserved.
           </p>

@@ -1,4 +1,3 @@
-import { BoostSaleSection } from "./components/boost-sale-section";
 import { CTASection } from "./components/cta-section";
 import { ExpertSupportSection } from "./components/expert-support-section";
 import { FAQAccordion } from "./components/faq-accordion";
@@ -26,7 +25,7 @@ export default function Home() {
         <TrustIndicators />
         <FeatureShowcase />
         <MarketValueSection />
-        <BoostSaleSection />
+        {/* <BoostSaleSection /> */}
         <WindowStickerSection />
         <TestimonialCarousel />
         <ExpertSupportSection />

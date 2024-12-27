@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FileText, Zap, ShieldCheck, BarChart2, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const stickerFeatures = [
   { 
@@ -160,11 +161,11 @@ export function WindowStickerSection() {
                 </Card>
               ))}
             </div>
-            <div className="text-center">
+            <Link href={'/window-sticker-lookup'} className="text-center block">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300">
                 Get Your Window Sticker
               </Button>
-            </div>
+            </Link>
           </motion.div>
         </div>
       </div>
