@@ -27,9 +27,6 @@ const VinLocationPopup: React.FC<VinLocationPopupProps> = ({ isOpen, onClose }) 
           height={300}
           layout="responsive"
         />
-        <p className="mt-4 text-sm text-gray-600">
-          The Vehicle Identification Number (VIN) can typically be found on the driver&apos;s side dashboard, visible through the windshield, or on the driver&apos;s side door jamb.
-        </p>
       </div>
     </div>
   );

@@ -76,14 +76,9 @@ export function Navigation() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
           </div>
           <nav className="flex items-center">
-            <Button asChild variant="ghost" className="text-gray-300 hover:text-blue-400 hover:bg-gray-800">
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white neon-border">
               <Link href="/login">
                 Login
-              </Link>
-            </Button>
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white neon-border">
-              <Link href="/signup">
-                Sign Up
               </Link>
             </Button>
           </nav>
