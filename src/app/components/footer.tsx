@@ -12,7 +12,7 @@ const navigation = [
   {
     title: "Window Stickers",
     links: [
-      { name: "Create Sticker", href: "/window-sticker" },
+      { name: "Create Sticker", href: "/window-sticker-lookup" },
       { name: "Sample Sticker", href: "/sample" },
     ]
   },

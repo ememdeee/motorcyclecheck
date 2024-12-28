@@ -24,33 +24,14 @@ const sampleData = {
     {
       type: "Sport",
       samples: [
-        { title: "2023 Ducati Streetfighter V4", vin: "ZDMVAKFV1PB000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2022 Suzuki GSX-R1000R", vin: "JS1GT7MA1M2100001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2021 Aprilia RSV4", vin: "ZD4KGP009MS000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2020 BMW S1000RR", vin: "WB10E0102LZ000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
-      ]
-    },
-    {
-      type: "Cruiser",
-      samples: [
-        { title: "2023 Indian Challenger", vin: "56KTCAAA3N3000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2022 Triumph Rocket 3", vin: "SMTD01FS5NT000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
-      ]
-    },
-    {
-      type: "Adventure",
-      samples: [
-        { title: "2023 Yamaha Ténéré 700", vin: "JYADP1C11LA000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" },
-        { title: "2022 Ducati Multistrada V4", vin: "ZDMVAKFV1PB000001", imageUrl:"/sticker-sample.png", url: "/sticker/vin/WAUFFAFC5HN007408-E323E323-C5C5-4A45-31B5-C95F9EB7CBEC" }
+        { title: "2023 Harlet-Davidson FXLRS", vin: "1HD1YWZ1XPB032365", imageUrl:"/SS_1.png", url: "/sticker/vin/1HD1YWZ1XPB032365-DF70DF70-2E2E-5940-4AE3-FD90538ECD71" },
+        { title: "2019 Royal Enfield Himalayan", vin: "ME3FSM248KK436493", imageUrl:"/SS_2.png", url: "/sticker/vin/ME3FSM248KK436493-A1D5A1D5-A8A8-9029-608B-19D25F515675" },
+        { title: "2006 Honda CBR600", vin: "JH2PC35106M700635", imageUrl:"/SS_3.png", url: "/sticker/vin/JH2PC35106M700635-F81FF81F-0707-BF36-ACA7-C5ED23750B1F" },
+        { title: "2024 CAN-AM Ryker", vin: "3JB2JEG40RJ000534", imageUrl:"/SS_4.png", url: "/sticker/vin/3JB2JEG40RJ000534-9D279D27-0606-AF1B-D6F8-904D474A1F74" }
       ]
     }
   ]
 }
-
-const motorcycleBrands = [
-  'Yamaha', 'Honda', 'Kawasaki', 'Suzuki', 'Harley-Davidson', 'BMW', 
-  'Ducati', 'KTM', 'Triumph', 'Indian', 'Aprilia', 'Moto Guzzi'
-]
 
 export default function SamplePage() {
   const [activeTab, setActiveTab] = useState("report")
@@ -76,7 +57,7 @@ export default function SamplePage() {
             {sampleData.report.map((category) => (
               <div key={category.type} className="w-full">
                 <h2 className="text-2xl font-semibold text-gray-200 mb-6">
-                  {category.type} Motorcycle History Reports
+                  Motorcycle History Reports
                 </h2>
                 <motion.div 
                   className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -129,7 +110,7 @@ export default function SamplePage() {
             {sampleData.sticker.map((category) => (
               <div key={category.type} className="w-full">
                 <h2 className="text-2xl font-semibold text-gray-200 mb-6">
-                  {category.type} Motorcycle Window Stickers
+                  Motorcycle Window Stickers
                 </h2>
                 <motion.div 
                   className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -146,7 +127,7 @@ export default function SamplePage() {
                     >
                       <Card key={sample.title} className="group hover:shadow-lg transition-all duration-300 glassmorphism">
                         <CardContent className="p-4 space-y-4">
-                          <div className="aspect-[3/2.3] relative bg-gray-100 rounded-lg overflow-hidden">
+                          <div className="aspect-[3/1.75] relative bg-gray-100 rounded-lg overflow-hidden">
                             <Image
                               src={sample.imageUrl}
                               alt={`${sample.title} Window Sticker Preview`}
@@ -161,7 +142,7 @@ export default function SamplePage() {
                             <div className="text-sm text-gray-500">
                               <p className="truncate">VIN: {sample.vin}</p>
                             </div>
-                            <Link href={sample.url} className='mt-4 block'>
+                            <Link href={sample.url} target='_blank' className='mt-4 block'>
                               <Button 
                                 variant="ghost" 
                                 className="w-full hover:bg-blue-900/50 transition-colors duration-300 neon-border"

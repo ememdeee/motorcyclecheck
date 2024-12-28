@@ -21,7 +21,7 @@ const VinLocationPopup: React.FC<VinLocationPopupProps> = ({ isOpen, onClose }) 
         </button>
         <h2 className="text-xl font-bold mb-4 text-black">VIN Location</h2>
         <Image
-          src="/how-to-find-the-vin-number.jpg"
+          src="/how-to-find-the-vin-number.webp"
           alt="VIN Location"
           width={400}
           height={300}

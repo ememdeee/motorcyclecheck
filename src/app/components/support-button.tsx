@@ -5,17 +5,19 @@ import { MessageCircle } from 'lucide-react'
 
 export function SupportButton() {
   return (
-    <Button
-      className="fixed bottom-4 right-4 z-50 rounded-full shadow-lg"
-      size="lg"
-      onClick={() => {
-        // Implement chat functionality
-        console.log('Open support chat')
-      }}
-    >
-      <MessageCircle className="mr-2 h-4 w-4" />
-      24/7 Support
-    </Button>
+    <a href='https://direct.lc.chat/17516280/' target='_blank'>
+      <Button
+        className="fixed bottom-4 right-4 z-50 rounded-full shadow-lg"
+        size="lg"
+        onClick={() => {
+          // Implement chat functionality
+          console.log('Open support chat')
+        }}
+      >
+        <MessageCircle className="mr-2 h-4 w-4" />
+        24/7 Support
+      </Button>
+    </a>
   )
 }
 

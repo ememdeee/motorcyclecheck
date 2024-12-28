@@ -4,8 +4,7 @@ import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { TrendingUp, Shield, Clock, Zap } from 'lucide-react'
-import { Input } from "@/components/ui/input"
-import { HoverToForm } from './HoverToForm copy'
+import { HoverToForm } from './HoverToForm'
 
 export function BoostSaleSection() {
   return (
@@ -45,7 +44,7 @@ export function BoostSaleSection() {
             Window Stickers That Demand Attention
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-            Want to elevate your motorcycle's appeal to buyers or make a statement at your next ride event? Our premium window stickers are designed to impress!
+            Want to elevate your motorcycle&apos;s appeal to buyers or make a statement at your next ride event? Our premium window stickers are designed to impress!
             </p>
 
             <HoverToForm>

@@ -39,7 +39,7 @@ export default function WindowStickerPage() {
 
         {/* Search Form */}
         <div className='max-w-2xl mx-auto'>
-          <SiteForm formStyle='motorcyclecheck' reportType='WS'/>
+          <SiteForm reportTab={false} formStyle='motorcyclecheck' reportType='WS'/>
         </div>
 
         {/* Features Section */}
@@ -107,7 +107,7 @@ export default function WindowStickerPage() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/2">
               <Image
-                src="/kawasaki-sticker.png"
+                src="/Kawasaki-Sticker.webp"
                 alt="Window Sticker Example"
                 width={500}
                 height={300}
@@ -173,10 +173,10 @@ export default function WindowStickerPage() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: 1, title: "Enter Details", description: "Input your motorcycle's specs", icon: FileText },
-              { step: 2, title: "Add Extras", description: "Highlight upgrades and modifications", icon: Plus },
-              { step: 3, title: "Customize Look", description: "Choose from various templates", icon: Paintbrush },
-              { step: 4, title: "Preview & Download", description: "Review and get your sticker", icon: Download },
+              { step: 1, title: "Enter Details", description: "Input your email & VIN", icon: FileText },
+              { step: 2, title: "Preview", description: "Check details and select a package", icon: Plus },
+              { step: 3, title: "Checkout", description: "Make your payment", icon: Paintbrush },
+              { step: 4, title: "View & Download", description: "View and download your sticker", icon: Download },
             ].map((item) => (
               <motion.div
                 key={item.step}

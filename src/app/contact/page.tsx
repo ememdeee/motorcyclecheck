@@ -6,8 +6,19 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 import { Clock, Mail, Phone } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Contact() {
+  const [formSubmitted, setFormSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    // Here you would typically send the form data to your server
+    // For this example, we'll just simulate a successful submission
+    setFormSubmitted(true)
+    setTimeout(() => setFormSubmitted(false), 3000) // Hide message after 3 seconds
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100">
       {/* Hero Section */}
@@ -45,7 +56,7 @@ export default function Contact() {
                 Simply fill out the form below or give us a call directly. Let us know what questions you have and how we can help. We&apos;re looking forward to hearing from you soon.
               </p>
             </div>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="firstName" className="text-sm font-medium text-gray-300">
@@ -110,6 +121,16 @@ export default function Contact() {
                 Launch Your Inquiry
               </Button>
             </form>
+            {formSubmitted && (
+              <motion.p
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="mt-4 text-green-400 text-center font-medium"
+              >
+                Form submitted successfully!
+              </motion.p>
+            )}
           </motion.div>
 
           {/* Contact Information */}
@@ -140,4 +161,3 @@ export default function Contact() {
     </div>
   )
 }
-

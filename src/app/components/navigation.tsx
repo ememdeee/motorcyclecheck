@@ -15,7 +15,7 @@ import { motion } from 'framer-motion'
 
 const navItems = [
   { href: '/sample', label: 'Sample' },
-  { href: '/window-sticker', label: 'Window Sticker' },
+  { href: '/window-sticker-lookup', label: 'Window Sticker' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/contact', label: 'Contact' },
 ]
